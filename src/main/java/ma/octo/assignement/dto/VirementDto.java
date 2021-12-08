@@ -1,0 +1,25 @@
+package ma.octo.assignement.dto;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import ma.octo.assignement.domain.Compte;
+import java.io.Serializable;
+import java.util.Date;
+
+@Data
+@NoArgsConstructor
+@ToString
+public class VirementDto implements Serializable {
+
+   
+	private static final long serialVersionUID = 1L;
+	
+	private Compte CompteEmetteur;
+    private Compte CompteBeneficiaire;
+    private String motifVirement;
+    private double montantVirement;
+    private Date dateExecution;
+	
+
+}
